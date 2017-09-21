@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>SLC Result Check File</title>
+	<script type="text/javascript"></script>
+
+</head>
+<body>
+
+<form name="slc" method="post" action="score.php" onSubmit="return validateForm();">
+  <fieldset>
+  <legend>SEE Result - 2073</legend>
+    
+	<br>
+	<label><b>Enter Symbol No : </b></label> 
+	<input type="text" name="symbol" id="symbol" size="20" maxlength="8"/> 
+    <input type="Submit" name="Submit" value="Submit"> Example (0201382D)<br><br>
+   </fieldset>
+</form>
+
+<script>
+
+function validateForm(){
+	var symbolNo = document.slc.symbol;
+	if(symbolNo.value==""){
+		alert("Please enter the vaild symbol number and search again !!!");
+		return false;
+	}
+	return true;
+}
+
+</script>
+</body>
+</html>
